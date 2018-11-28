@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 
 class BottomBar extends StatefulWidget {
   @override
-  BottomBarStatus createState() => new BottomBarStatus();
+  BottomBarState createState() => new BottomBarState();
 }
 
-class BottomBarStatus extends State<BottomBar> {
+class BottomBarState extends State<BottomBar> {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build

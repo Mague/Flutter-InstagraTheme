@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:instagram/components/BottomBar.dart';
+import 'package:instagram/pages/Home.dart';
 
 void main() => runApp(MyApp());
 
@@ -27,13 +28,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -57,7 +51,7 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
           body: TabBarView(
             children: [
-              Icon(Icons.directions_car),
+              HomePage(),
               Icon(Icons.directions_transit),
               Icon(Icons.directions_bike),
               Icon(Icons.home),
