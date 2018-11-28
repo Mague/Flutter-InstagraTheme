@@ -10,31 +10,28 @@ class StoriesStatus extends State<Stories>{
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    return Row(
-      children: <Widget>[
-        Flexible(
-          child: CustomScrollView(
-            scrollDirection: Axis.horizontal,
-            shrinkWrap: true,
-            slivers: <Widget>[
-              SliverList(
-                delegate: SliverChildListDelegate(
-                    <Widget>[
-                      StoriesUser(),
-                      StoriesUser(),
-                      StoriesUser(),
-                      StoriesUser(),
-                      StoriesUser(),
-                      StoriesUser(),
-                      StoriesUser(),
-                    ]
-                ),
-              )
-            ],
-          ),
-        ),
-
-      ],
+    return Container(
+      width: double.infinity,
+      height: 100.0,
+      child: CustomScrollView(
+        scrollDirection: Axis.horizontal,
+        shrinkWrap: true,
+        slivers: <Widget>[
+          SliverList(
+            delegate: SliverChildListDelegate(
+                <Widget>[
+                  StoriesUser(),
+                  StoriesUser(),
+                  StoriesUser(),
+                  StoriesUser(),
+                  StoriesUser(),
+                  StoriesUser(),
+                  StoriesUser(),
+                ]
+            ),
+          )
+        ],
+      ),
     );
   }
 
