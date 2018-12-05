@@ -9,7 +9,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Instagram Theme',
       theme: ThemeData(
         primarySwatch: Colors.grey,
       ),
@@ -28,7 +28,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -36,14 +35,40 @@ class _MyHomePageState extends State<MyHomePage> {
         length: 5,
         child: Scaffold(
           appBar: AppBar(
-            title: Center(
-              child: Text(
-                widget.title,
-                style: TextStyle(color: Colors.black),
+            title: Image.network(
+              'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/800px-Instagram_logo.svg.png',
+              height: 35.0,
+              
+              color: Colors.black,
+            ),
+            leading: Container(
+              child: Stack(
+                alignment: AlignmentDirectional.centerStart,
+                children: <Widget>[
+                  IconButton(
+                    icon: Icon(Icons.camera_alt),
+                    tooltip: 'camara',
+                    onPressed: null,
+                  )
+                ],
               ),
             ),
             actions: <Widget>[
-              new IconButton(
+              IconButton(
+                icon: Container(
+                  padding: EdgeInsets.all(2.0),
+                  child: Column(
+                    children: <Widget>[
+                      Image.network(
+                          'https://upload.wikimedia.org/wikipedia/commons/0/0f/IGTV_logo.png'),
+                    ],
+                  ),
+                ),
+                tooltip: 'camara',
+                onPressed: null,
+                alignment: Alignment.centerLeft,
+              ),
+              IconButton(
                 icon: const Icon(Icons.send),
               ),
             ],

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:instagram/components/CardPost.dart';
 import 'package:instagram/components/Stories.dart';
 
 
@@ -11,26 +12,12 @@ class HomePageStatus extends State<HomePage>{
 
   //var textList = ;
   List<Widget> lol = <Widget>[ Stories(),Divider(color: Colors.grey,),
-  Text('asdsd'),
-  Text('asdsd'),
-  Text('asdsd'),
-  Text('asdsd'),
-  Text('asdsd'),
-  Text('asdsd'),
-  Text('asdsd'),
-  Text('asdsd'),
-  Text('asdsd'),
-  Text('asdsd'),
-  Text('asdsd'),
-  Text('asdsd'),
-  Text('asdsd'),
-  Text('asdsd'),
+  CardPost(),
   ] ;
 
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Scaffold(
       body: Container(
         width: double.infinity,

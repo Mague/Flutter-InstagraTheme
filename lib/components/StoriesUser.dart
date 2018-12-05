@@ -18,7 +18,7 @@ class StoriesUserState extends State<StoriesUser>{
           decoration: BoxDecoration(
             shape: BoxShape.circle,
             image: DecorationImage(
-              fit: BoxFit.fill,
+              fit: BoxFit.cover,
               image: NetworkImage(
                   'https://www.atlantichousefm.com/assets/img/CATLEY_LAKEMAN-Tom.jpg'),
             ),
